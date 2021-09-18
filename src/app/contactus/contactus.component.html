@@ -1,0 +1,24 @@
+<body>
+  <div id="Contactcontent">
+    <div class="imgBack"*ngIf="getUser()==='user'+sliceUser()"><!--'user+sliceUser()'== tất cả các username bắt đầu bằng "user"-->
+      <button class="imgBackbtn" routerLink="/home/featured"><img src="assets/images/back-contact.png"></button>
+    </div>
+  <div id="cc1">
+    <div id="cctxt">
+        <h2 id="cch11">CONTACT</h2><br>
+        <h2 id="cch12">US<div style="width:30px;background-color:rgb(231, 48, 48);height:5px;"></div></h2>
+    </div>
+  </div>
+  <div id="cc2">
+     <div id="ccform">
+       <label id="lbform"><h3>GLAMOUSENTS</h3></label>
+       <form>
+        <input class="ccinput" type="email" placeholder="Email"><br>
+        <input class="ccinput1" type="text" placeholder="Message"><br>
+        <button class="btnform" routerLink="/"><h5>CANCEL</h5></button>
+        <button class="btnform1"><h5>SEND</h5></button>
+       </form>
+     </div>
+  </div>
+</div>
+</body>

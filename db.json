@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "id": 12,
+      "title": "De Toilette",
+      "price": 10,
+      "image": "men1.jpg",
+      "gender": "men"
+    },
+    {
+      "id": 11,
+      "title": " Burberry Touch ",
+      "price": 20,
+      "image": "men2.jpg",
+      "gender": "girl"
+    },
+    {
+      "id": 23,
+      "title": "Burberry Touch",
+      "price": 75,
+      "image": "men3.jpg",
+      "gender": "men"
+    },
+    {
+      "id": 68,
+      "title": "Tom Ford ",
+      "price": 40,
+      "image": "girl1.jpg",
+      "gender": "girl"
+    },
+    {
+      "id": 56,
+      "title": "Versace Yellow",
+      "price": 50,
+      "image": "girl2.jpg",
+      "gender": "men"
+    },
+    {
+      "id": 62,
+      "title": "Lancome Balafre",
+      "price": 60,
+      "image": "girl3.jpg",
+      "gender": "girl"
+    },
+    {
+      "id": 36,
+      "title": "Givenchy Gentlemen",
+      "price": 80,
+      "image": "girl4.jpg",
+      "gender": "men"
+    },
+    {
+      "id": 44,
+      "title": "Versace Blue",
+      "price": 45,
+      "image": "duphong2.png",
+      "gender": "men"
+    }
+  ]
+}

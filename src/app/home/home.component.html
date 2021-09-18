@@ -1,0 +1,118 @@
+<!--index login-->
+<!---->
+<body>
+  <app-header></app-header>
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="assets/images/slider1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="assets/images/slider2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+          <div class="carousel-item" data-bs-interval="2000">
+        <img src="assets/images/slider3.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div id="gr-btn-product">
+    <button id="btn-featured" onclick="chBackcolor();" routerLink="featured">FEATURED</button>
+    <button id="btn-girl" onclick="chBackcolor1();" routerLink="girl">GIRL</button>
+    <button id="btn-men" onclick="chBackcolor2();" routerLink="men">MEN</button>
+  </div>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+  <div id="banner">
+    <div id="imgbanner">
+      <img style="height:1000px;width:700px;"src="assets/images/imgbn.jpg">
+    </div>
+    <div id="itembn">
+      <div id="txtitembanner">OUR ADVANTAGES</div>
+      <div id="contentItem">
+        <div id="ritem1">
+          <div class="row1itemL">
+            <img style="position:relative;left:26px;top:15px;height:70px;"src="assets/images/likeItem.png">
+            <h4 class="txt">Individual Approach</h4>
+            <hr class="Item-hr">
+            <h6 class="txt2">
+                  We use an individual approach to <br>
+                  each client and we never offer you
+                  <br> set of standard decisions for your business.
+            </h6>
+          </div>
+          <div class="row1itemR">
+            <img style="position:relative;left:26px;top:15px;height:70px;" src="assets/images/headphones.png">
+            <h4 class="txt">24/7 Online Support</h4>
+            <hr class="Item-hr">
+            <h6 class="txt2">
+              Our online support is available 24 hours<br>
+              a day to answer your every question and <br>
+              help you solve any issue you may have <br>with
+              Brave.
+            </h6>
+          </div>
+        </div>
+        <div id="ritem2">
+          <div class="row1itemL">
+            <img style="position:relative;left:26px;top:15px;height:70px;"src="assets/images/group.png">
+            <h4 class="txt">Employees</h4>
+            <hr class="Item-hr">
+            <h6 class="txt2">
+              Brave is a team of designers, developers,<br>
+              marketing experts and managers who are<br>
+              ready to work on a personalized web<br>
+              solution.
+            </h6>
+          </div>
+          <div class="row1itemR">
+            <img style="position:relative;left:26px;top:15px;height:70px;" src="assets/images/credit-card.png">
+            <h4 class="txt">Payment Method</h4>
+            <hr class="Item-hr">
+            <h6 class="txt2">
+              We provide a variety of payment methods<br>
+              with Brave that include Paypal,Visa/
+              <br>Mastercard/American Express and<br>
+              lots of others, which can be customized.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="lastct">
+    <div id="txthome" style="text-align: center;">
+      <div style="position: relative;top:17px;"><a style="color:white;">Brave Theme is your choice in the world of web solutions.
+      <a style="font-size:16px; color:rgb(253, 220, 169)" routerLink="/contact"><u>contact us!</u></a></a>
+    </div>
+    </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+</body>

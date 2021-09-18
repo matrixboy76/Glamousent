@@ -1,0 +1,91 @@
+/*Contact*/
+body{
+  background-color: #3E3E39 ;
+}
+.imgBack{
+  position:relative;
+  top:100px;
+  left:120px;
+}
+.imgBackbtn{
+  border: none;
+}
+#Contactcontent{
+  width:1200;
+  height: 100%;
+}
+#cc1{
+  float:left;
+  width:200px;
+  background-color: #3E3E39 ;
+  height:400px;
+}
+#cc2{
+  float:right;
+  width:500px;
+  background-color: #3E3E39 ;
+  height:400px;
+}
+#cch11{
+  position: relative;
+  top:30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#cch12{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+#cctxt{
+  color:rgb(231, 48, 48);
+  position: relative;
+  left:300px;
+  top:120px;
+}
+#ccform{
+  position: relative;
+  top:200px;
+  left:250px;
+}
+#lbform{
+  color: white;
+  border-bottom: 1px solid #919089 ;
+  width: 500px;
+  position: relative;
+  bottom: 30px;
+}
+.ccinput,.ccinput1{
+  border-bottom: 1px solid #919089 ;
+  background-color: transparent;
+  border-top: 0px solid;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  height: 40px;
+  width: 500px;
+  color: #CCC;
+  outline:none;
+}
+.ccinput1{
+  position: relative;
+  top:90px;
+}
+.btnform{
+  position:relative;
+  top:120px;
+  left: 280px;
+  width: 200px;
+  border:none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #D8B65B ;
+  background-color: #3E3E39 ;
+}
+.btnform1{
+  position:relative;
+  top:120px;
+  left: 250px;
+  border:none;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #D8B65B ;
+  background-color: #3E3E39 ;
+}
+h2{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}

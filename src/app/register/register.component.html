@@ -1,0 +1,115 @@
+
+<!--
+/*
+ *	This content is generated from the PSD File Info.
+ *	(Alt+Shift+Ctrl+I).
+ *
+ *	@desc
+ *	@file 		untitled
+ *	@date 		1631792601585
+ *	@title 		Page 1
+ *	@author
+ *	@keywords
+ *	@generator 	Export Kit v1.3.figma
+ *
+*/
+ -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<title>untitled</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="" >
+		<link rel="StyleSheet" href="untitled.css" />
+		<script src="https://secure.exportkit.com/cdn/js/ek_googlefonts.js?v=4"></script>
+		<!-- Add your custom HEAD content here -->
+
+	</head>
+	<body>
+		<div id="content-container" >
+			<div id="page_desktop___1_ek1">
+				<div id="_bg__desktop___1_ek2"></div>
+				<div id="rectangle_1"  ></div>
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form" >
+          <!--<div id="txt_password_ek3">-->
+          <div class="form-group">
+            <div id="txt_password_ek3">
+            <input type="email" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" id="email" placeholder="Last Name">
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div>
+            </div>
+          </div>
+          <!--<div id="txt_password_ek2" >-->
+          <div class="form-group">
+            <div id="txt_password_ek2" >
+            <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"  id="name" placeholder="First Name">
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div>
+            </div>
+          </div>
+          <!--<div id="txt_password_ek1" >-->
+          <div class="form-group">
+            <div id="txt_password_ek1" >
+            <input type="text" formControlName="username" class="form-control" id="txt_password_ek1" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="pass" placeholder="UserName">
+            <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required">Username is required  </div><!--thông báo khi không nhập gì-->
+            </div>
+            </div>
+          </div>
+
+          <!--<div id="txt_password" >-->
+          <div class="form-group">
+            <div id="txt_password" >
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"  id="re_pass" placeholder="Password">
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+              <div *ngIf="f.password.errors.required">Password is required</div>
+                <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+            </div>
+          </div>
+            <div class="form-group" style="position:relative;top:500px;left:505px;	width: 400px;height:50px">
+              <div class="form-group form-button">
+                <button [disabled]="loading" style="position:relative; left:10px ;background-color : #3197A6;border: none;border-radius: 6px ;width: 390px;height: 50px;	overflow: hidden;font-family: Taprom;font-size:20px;text-align: center;color:#eeebeb;">
+                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                    Create Account
+                </button>
+              </div>
+            </div>
+        </form>
+				<div id="__or_" >
+					-OR-
+				</div>
+				<div id="rectangle_3"  ></div>
+				<div id="title" >
+					Create Account
+				</div>
+				<div id="english__uk_" >
+					English (UK)
+				</div>
+				<img src="assets/images/polygon_1.png" id="polygon_1" />
+				<div id="rectangle_2"  ></div>
+				<div id="sign_up_with_facebook" >
+					Sign up with Facebook
+				</div>
+				<div id="sign_up_with_google" >
+					Sign up with Google
+				</div>
+				<div id="already_have_an_account__login" >
+					<span style="font-style:normal; font-weight:normal; text-decoration:NONE; ">Already have an account? </span><button style="border:none;background-color:white;color:#3197A6; font-style:normal; font-weight:normal; text-decoration:NONE; " routerLink="/login">Login</button>
+				</div>
+				<img src="assets/images/ggicon.png" id="ggicon" />
+				<img src="assets/images/facebook_1.png" id="facebook_1" />
+				<div id="line_1"  ></div>
+				<img src="assets/images/line_2.png" id="line_2"/>
+				<div id="line_3"  ></div>
+				<div id="line_4"  ></div>
+				<img src="assets/images/_3d_image.png" id="_3d_image" />
+			</div>
+		</div>
+		<script>var specialChars = document.querySelectorAll("span.char"); for(var c=0; c<specialChars.length; c++){ specialChars[c].innerHTML = decodeURIComponent(specialChars[c].innerHTML); }</script>
+	</body>
+</html>

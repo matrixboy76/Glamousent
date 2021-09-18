@@ -1,0 +1,254 @@
+<body>
+<style media="screen">
+  /*body { padding-top: 70px; }*/
+  #connectLogo {
+    height: 60px;
+    padding: 15px 0 5px 0;
+  }
+  #logo {
+    height: 60px;
+    padding: 5px 0 5px 20px;
+  }
+
+  .share-link {
+    line-height: 60px;
+    padding: 0 1em;
+    font-size: 2em;
+  }
+</style>
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <div class="sidebar-nav"><a class="navbar-brand" ><img src="assets/images/logoadmin.png"/></a></div>
+    <div class="sideB">
+      <ul class="sidebar-nav">
+        <li>
+          <a href="#">Management</a>
+        </li>
+        <li>
+          <a href="/admin/order">Order</a>
+        </li>
+        <li>
+          <a (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--*******************************************************************************Nav***************-->
+  <nav class="navbar navbar-expand-lg navbar-light-admin" *ngIf="currentUser">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse">
+        <span>
+            <a class="nav-item nav-link" routerLink="/home/featured" ><img src="assets/images/logoAdmin2.png"></a>
+        </span>
+        <span id="lg">
+          <a><img src="assets/images/user.png" /></a>
+          <label>&nbsp;<strong>{{ getUser() }}</strong> </label>
+        </span>
+      </div>
+    </div>
+  </nav>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+    <div id="managerContent">
+      <div id="manacontent">
+        <div class="icoAdmin"><img src="assets/images/productAdmin.png"></div>
+        <div id="textContent"><strong>Products : </strong> <span *ngFor= "let item of productData ; let i = index; let last = last" ><span  *ngIf="last">{{i+1}}</span></span> <br>
+          <div class="value">1 mouth</div>
+        </div>
+      </div>
+      <div id="manacontent1">
+        <div class="icoAdmin"><img src="assets/images/groupAdmin.png"></div>
+        <div id="textContent"><strong> Users : </strong><span>{{countuser}}</span><br>
+          <div class="value">1 mouth</div>
+        </div>
+      </div>
+      <div id="manacontent2">
+        <div class="icoAdmin"><img src="assets/images/userAdmin.png"></div>
+        <div id="textContent"><strong> Admin : </strong> <span>{{countadmin}}</span> <br>
+          <div class="value">1 mouth</div>
+        </div>
+      </div>
+    </div>
+    <div id="crud">
+      <div id="tab">
+
+
+        <div class="titleAdmin"><h5>Add product</h5></div>
+        <div class="contentAdmin">
+          <form [formGroup]="formValue">
+            <div class="mb-2">
+              <input type="text" formControlName="Title" class="form-control" id ="exampleInputEmail" placeholder="Title"><!--placeholder:cung cấp thông tin cho thẻ input bất cứ chỗ nào bạn muốn-->
+            </div>
+            <div class="mb-2">
+              <input type="number" formControlName="Price" class="form-control" id ="exampleInputEmail" placeholder="Price">
+            </div>
+            <div class="mb-2">
+              <input type="text" formControlName="Image" class="form-control" id ="exampleInputEmail" placeholder="Image">
+            </div>
+            <div class="mb-2">
+              <input type="text" formControlName="Gender" class="form-control" id ="exampleInputEmail" placeholder="Gender">
+            </div>
+          </form>
+          <div class="btnAdmin1"><button  type="button" (click)="postProductDetails()" class="btn-submitAdmin">Add</button></div>
+        </div>
+      </div>
+
+
+      <div id="edit">
+        <div class="titleAdmin"><h5>Edit product</h5></div>
+        <div class="contentAdmin">
+          <form [formGroup]="formValue">
+              <div class="mb-2">
+                <input type="number" formControlName="Id" class="form-control" id ="exampleInputEmail" placeholder="Id">
+              </div>
+              <div class="mb-2">
+                <input type="text" formControlName="Title" class="form-control" id ="exampleInputEmail" placeholder="Title">
+              </div>
+              <div class="mb-2">
+                <input type="text" formControlName="Price" class="form-control" id ="exampleInputEmail" placeholder="Price">
+              </div>
+              <div class="mb-2">
+                <input type="text" formControlName="Image" class="form-control" id ="exampleInputEmail" placeholder="Image">
+              </div>
+              <div class="mb-2">
+                <input type="text" formControlName="Gender" class="form-control" id ="exampleInputEmail" placeholder="Gender">
+              </div>
+          </form>
+          <div class="btnAdmin2"><button type="button" (click)="updatePD()" class="btn-submitAdmin">Update</button></div>
+        </div>
+      </div>
+
+
+
+      
+      <div id="view">
+        <div id="thead">
+          <div id ="contentHead">
+            <tr align="center">
+              <td class="titleH" style="width:50px;">Id</td>
+              <td class="titleH" style="width:195px;">Sản phẩm</td>
+              <td class="titleH" style="width:71px">Đơn giá</td>
+              <td class="titleH" style="width:70px">Giới tính</td>
+              <td class="titleH" style="width:58px">Thao tác</td>
+            </tr>
+          </div>
+        </div>
+        <div id="tbody">
+          <table >
+            <thead>
+            </thead>
+            <tbody align="center">
+
+              
+              <tr id="productline" *ngFor= "let pr of productData" >
+                <td style="width:80px;" >{{pr.id}}</td>
+                <td style="width:300px;"><span style="float:left;position: relative;left:10px;">
+                  <img src="assets/images/{{pr.image}}" width="40px;"></span><span style="float:left;position: relative;left:25px;">
+                    {{pr.title}}
+                  </span>
+                </td>
+                <td style="width:100px;">${{pr.price}}</td>
+                <td style="width:80px;">{{pr.gender}}</td>
+                <td style="width:80px;">
+                  <button (click)="deletePD(pr)" class="btndeleteAdmin"><img src="assets/images/trash-bin.png"></button>
+                </td>
+              </tr>
+
+
+
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div id="contentAccount">
+      <!--List User-->
+      <div id="listUser">
+        <div id="thead1">
+          <div id="contentthead1">
+              <tr align="center">
+                <th class="titleH" style="width:40px;">Id</th>
+                <th class="titleH" style="width:150px;">FirstName</th>
+                <th class="titleH" style="width:150px;">LastName</th>
+                <th class="titleH" style="width:200px;">Username</th>
+                <th class="titleH" style="width:100px;">Password</th>
+                <th class="titleH" style="width:100px;">Thao tác</th>
+              </tr>
+          </div>
+        </div>
+        <div id="contentUserdata">
+          <table>
+            <thead >
+            </thead>
+            <tbody align="center">
+
+
+              <div class="bodyrow" *ngFor= "let user of userData">
+                <div class="contentbodyrow">
+                  <tr>
+                    <td style="width:40px;">{{user.id}}</td>
+                    <td style="width:150px;">{{user.firstName}}</td>
+                    <td style="width:150px;">{{user.lastName}}</td>
+                    <td style="width:200px;">{{user.username}}</td>
+                    <td style="width:100px;">{{user.password}}</td>
+                    <td style="width:100px;"
+>
+                      <button (click)="deleteuser(user)" class="btndeleteAdmin"><img src="assets/images/trash-bin1.png"></button>
+
+
+                    </td>
+                  </tr>
+                </div>
+              </div>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <!--List Admin-->
+      <div id="listAdmin">
+        <div id="thead1">
+          <div id="contentthead1">
+              <tr align="center">
+                <th class="titleH" style="width:40px;">Id</th>
+                <th class="titleH" style="width:150px;">FirstName</th>
+                <th class="titleH" style="width:150px;">LastName</th>
+                <th class="titleH" style="width:200px;">Username</th>
+                <th class="titleH" style="width:100px;">Password</th>
+                <th class="titleH" style="width:100px;">Thao tác</th>
+              </tr>
+          </div>
+        </div>
+        <div id="contentUserdata">
+          <table>
+            <thead >
+            </thead>
+            <tbody align="center">
+              <div class="bodyrow" *ngFor= "let admin of adminData">
+                <div class="contentbodyrow">
+                  <tr>
+                    <td style="width:40px;">{{admin.id}}</td>
+                    <td style="width:150px;">{{admin.firstName}}</td>
+                    <td style="width:150px;">{{admin.lastName}}</td>
+                    <td style="width:200px;">{{admin.username}}</td>
+                    <td style="width:100px;">{{admin.password}}</td>
+                    <td style="width:100px;">
+                       <button (click)="deleteadmin(admin)" class="btndeleteAdmin"><img src="assets/images/trash-bin1.png"></button>
+                    </td>
+                  </tr>
+                </div>
+              </div>
+            </tbody>
+            <tfoot>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+</div>
+</body>

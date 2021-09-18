@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+
+$theme-colors: (
+  "primary": rgb(155, 99, 99),
+  "success": rgb(99, 155, 99)
+
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+// 5. Add additional custom code here
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+// Default variable overrides
+$body-bg:white;
+$body-color: #111;
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// Optional Bootstrap components here
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+// etc
+.multi-item-carousel{
+  .carousel-inner{
+    > .item{
+      transition: 500ms ease-in-out left;
+    }
+    .active{
+      &.left{
+        left:-33%;
+      }
+      &.right{
+        left:33%;
+      }
+    }
+    .next{
+      left: 33%;
+    }
+    .prev{
+      left: -33%;
+    }
+    @media all and (transform-3d), (-webkit-transform-3d) {
+      > .item{
+        transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out all;
+        backface-visibility: visible;
+        transform: none!important;
+      }
+    }
+  }
+}
+#nz-div-4 h3.tde :after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-left: 20px solid #3197a6;
+  border-bottom: 0px solid transparent;
+  border-right: 0 solid transparent;
+  position: absolute;
+  top: 0px;
+  right: -20px;
+}
+
+
+#nz-div-4 h3.tde :before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 40px 20px 0px 0px;
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: #3197a6;
+  position: absolute;
+  top: 0px;
+  left: -20px;
+}
+
+#nz-div-4 h3.tde span {
+  background: #3197a6;
+  padding: 10px 20px 8px 20px;
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+
+}
+
+#nz-div-4 h3.tde {
+  text-align: center;
+  margin: 45px 0;
+  border-bottom: 2px solid #3197a6;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.nav-item {
+  font-size: larger;
+}
+//footer
+
+.form__field {
+     width: 90%;
+     background: #fff;
+     color: #a3a3a3;
+     font: inherit;
+     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+     border: 0;
+     outline: 0;
+     padding: 8px 4px;
+ }
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Roboto;
+ }
+
+#cartcus{
+  width: 35px;
+}
+#lg{
+  width: 150px;
+  text-align: center;
+}
+#usname{
+  position: relative;
+  top:3px;
+}

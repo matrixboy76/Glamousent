@@ -1,0 +1,36 @@
+.btn-AddProd{
+  border:none;
+  border-radius: 5px;
+  height:40px;
+  background-color: #E59866 ;
+  color:white;
+  width:120px;
+  position: relative;
+  left:65px;
+}
+.btnImg{
+  border: none;
+  width:100px;
+}
+.col-md-3{
+  border:none;
+  height:450px;
+}
+#titleProd{
+  white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;
+  text-align: center;
+  position:relative;
+  top:15px;
+}
+
+#priceProd{
+  text-align: center;
+}
+#star{
+  text-align: center;
+  position: relative;
+  bottom: 15px;
+}
+.checked{
+  color:orange;
+}

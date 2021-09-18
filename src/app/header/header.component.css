@@ -1,0 +1,102 @@
+/*--------------------------NAV---------------------*/
+.navbar-brand{
+  width: 300px;;
+}
+/*------------Nav--------------------------*/
+#navbarText{
+  width: 480px;
+  position:relative;
+}
+/*------------search-cart------------------*/
+#search{
+  width: 700px;
+}
+#cartcus{
+  float:right;
+  width: 350px;
+  position: relative;
+  bottom: 20px;
+  left:200px;
+}
+#searchUser{
+  float:left;
+  width: 300px;
+  position: relative;
+  top:16px;
+}
+#ttGH{
+  position: relative;
+  left:8px;
+  top:10px;
+}
+/*-------------Sub Nav---------------------*/
+#subNav{
+  width: 245px;
+}
+#lg0{
+  position: relative;
+  bottom: 45px;
+}
+#lg{
+  float:left;
+  width: 140px;
+  position: relative;
+  bottom: 10px;
+  left:13px;
+}
+#logoutBtn
+{
+  float: right;
+  width: 105px;
+  position: relative;
+  left:5px;
+}
+.nav-item{
+  width:120px;
+  font-family:'Times New Roman', Times, serif
+}
+.nav-item:hover{
+  background-color: #3197a6;
+}
+.navbar-nav{
+  position: relative;
+  left:300px;
+}
+.navbar-light{
+  background-color: white;
+  height: 140px;
+}
+.search-box{
+  position: relative;
+  left:200px;
+}
+.input-search{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+.btn-search{
+  background-color: white;
+  border: none;
+}
+.navbar-text{
+  position: relative;
+  left :150px;
+}
+
+.logout-1:hover{
+  background-color: #3197a6;
+}
+/*----------------logout button-----------------*/
+.btn-logout{
+  border: none;
+  position:relative;
+  bottom: 45px;
+  left:10px;
+  background-color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background:#F1948A ;
+  height: 40px;
+  width: 85px;
+}

@@ -1,0 +1,311 @@
+/*
+	@name untitled
+*/
+/* Only edit this if you know what you are doing! */
+body { margin: 0px; padding: 0px; font-family:"Arial"; overflow-x:hidden;background-color: #3197a6; }
+
+/* Only edit this if you know what you are doing! */
+img { position: absolute; display: block; margin: 0px; border: none; padding: 0px; }
+
+/* Only edit this if you know what you are doing! */
+div { position: absolute; }
+body{
+  height:100%;
+}
+#content-container {
+  display: block;
+  position: relative;
+  top: 50px;
+  width: 973px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+#content-container > div{ position: relative; top:inherit; }
+#page_desktop___1_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 973px;
+	height: 626px;
+}
+
+#_bg__desktop___1_ek2 {
+	top: 0px;
+	left: 0px;
+	width: 973px;
+	height: 626px;
+	background:rgba(49,151,166,1);
+}
+
+
+#rectangle_1 {
+	top: 5px;
+	left: 382px;
+	width: 586px;
+	height: 616px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	-ms-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	-o-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	-webkit-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	-moz-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+	background:rgba(255,255,255,1);
+}
+
+
+#txt_password {
+	top: 413px;
+	left: 504px;
+	width: 400px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 17px;
+	text-align: center;
+	color:#CECECE;
+}
+
+
+#txt_password_ek1 {
+	top: 358px;
+	left: 504px;
+	width: 400px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 17px;
+	text-align: center;
+	color:#CECECE;
+}
+
+
+#txt_password_ek2{
+	top: 302px;
+	left: 504px;
+	width: 400px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 17px;
+	text-align: center;
+	color:#DBDBDB;
+}
+
+
+#txt_password_ek3 {
+	top: 250px;
+	left: 502px;
+	width: 400px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 17px;
+	text-align: center;
+	color:#DBDBDB;
+}
+.form-control{
+  width: 100px;
+}
+
+#__or_ {
+	top: 193px;
+	left: 632px;
+	width: 143px;
+	height: 77px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 20px;
+	text-align: center;
+	color:#B0B0B0;
+}
+
+
+#rectangle_3 {
+	top: 129px;
+	left: 501px;
+	width: 200px;
+	height: 46px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #cfcfcf;
+	background:rgba(255,255,255,1);
+}
+
+
+#title {
+	top: 60px;
+	left: 450px;
+	width: 277px;
+	height: 69px;
+	overflow: hidden;
+	font-family: Tauri;
+	font-size: 30px;
+	text-align: center;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #000000;
+	text-shadow: 0 0 2px #000000;
+	color:#000000;
+}
+
+
+#english__uk_ {
+	top: 23px;
+	left: 737px;
+	width: 211px;
+	height: 45px;
+	overflow: hidden;
+	font-family: Roboto;
+	font-size: 14px;
+	text-align: center;
+	color:#B7B7B7;
+}
+
+
+#polygon_1 {
+	top: 29px;
+	left: 894px;
+	width: 20px;
+	height: 10px;
+}
+
+
+#rectangle_2 {
+	top: 129px;
+	left: 710px;
+	width: 208px;
+	height: 46px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	border: 1px solid #cfcfcf;
+	background:rgba(255,255,255,1);
+}
+
+
+#sign_up_with_facebook {
+	top: 138px;
+	left: 745px;
+	width: 181px;
+	height: 34px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 14px;
+	text-align: center;
+	color:#6F6C6C;
+}
+
+
+#sign_up_with_google {
+	top: 138px;
+	left: 542px;
+	width: 163px;
+	height: 34px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 14px;
+	text-align: center;
+	color:#6F6C6C;
+}
+
+
+#already_have_an_account__login {
+	top: 560px;
+	left: 486px;
+	width: 318px;
+	height: 50px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 18px;
+	text-align: center;
+	color:#6F6C6C;
+}
+
+
+#ggicon {
+	top: 135px;
+	left: 514px;
+	width: 29px;
+	height: 30px;
+}
+
+
+#facebook_1 {
+	top: 135px;
+	left: 716px;
+	width: 31px;
+	height: 30px;
+}
+.form-control{
+  border: none;
+  width:450px;
+}
+
+#line_1 {
+	top: 284px;
+	left: 504px;
+	width: 412px;
+	height: 1px;
+	background:#A1A1A1;
+}
+
+
+#line_2 {
+	top: 334px;
+	left: 504px;
+	width: 412px;
+	height: 2px;
+}
+
+
+#line_3 {
+	top: 389px;
+	left: 504px;
+	width: 412px;
+	height: 1px;
+	background:#A1A1A1;
+}
+
+
+#line_4 {
+	top: 443px;
+	left: 504px;
+	width: 412px;
+	height: 1px;
+	background:#A1A1A1;
+}
+
+
+#_3d_image {
+
+	width: 550px;
+	height: 600px;
+}
+
+
+#___s__d_ng_export_kit___lightning_storm_th__ph_i___ng_nh_p_mail__ang_s__d_ng_figma__v__k_ch_ho_t_t_i_kho_n_gmail_https___exportkit_com_dashboard_ {
+	top: 57px;
+	left: 1027px;
+	width: 322px;
+	height: 64px;
+	overflow: hidden;
+	font-family: Taprom;
+	font-size: 10px;
+	text-align: center;
+	color:#000000;
+}
+/*Custom*/
+#register-form input{
+  border:none;
+  width: 400px;
+  height: 50px;
+  position: relative;
+}

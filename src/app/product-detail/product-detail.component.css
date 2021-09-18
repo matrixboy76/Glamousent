@@ -1,0 +1,73 @@
+/*btn Add to cart*/
+.btn-AddProd{
+  border:none;
+  height:40px;
+  background-color: #E59866 ;
+  color:white;
+  width:520px;
+  position: relative;
+  left:10px;
+}
+#btndetail{
+  position: relative;
+  top:170px;
+}
+/*-------------------Content-------------*/
+#title{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  color:rgb(102, 101, 101);
+  position:relative;
+  left:5px;
+}
+#pdcontent{
+  width:1320px;
+  position:relative;
+  left:250px;
+  top:100px;
+}
+#pd1{
+  position:relative;
+  left:100px;
+  float:left;
+  width:500px;
+  height:500px;
+  background-color: brown;
+}
+#pd2{
+  position:relative;
+  right:100px;
+  background-color:white;
+  float:right;
+  height: 500px;
+  width: 600px;
+}
+#pdtitle{
+  width:520px;
+  position:relative;
+  top:30px;
+  left:10px;
+  color:cadetblue;
+}
+#pdprice{
+  position:relative;
+  top:50px;
+  left:10px;
+}
+#pricetitle{
+  position:relative;
+  top:100px;
+  left:10px;
+  color:cadetblue
+}
+#price{
+  position:relative;
+  top:50px;
+  font-size: 50px;
+  color:rgb(241, 33, 102)
+}
+#tag{
+  position:relative;
+  top:50px;
+  left:10px;
+}

@@ -1,0 +1,143 @@
+<!--***************************************Style over**********************************-->
+<style>
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+</style>
+<!--***************************************Header**************************************-->
+<body>
+
+<div class="start-page">
+  <div class="cont">
+    <div id="btn-lg">
+      <button class="btn-logout" (click)="logout()"><b>Logout</b></button>
+    </div>
+    <div id="lg">
+        <a><img src="assets/images/user.png"></a>
+        <label id="usname"><b>&ensp;{{getUser()}}&emsp;</b></label>
+    </div>
+  </div>
+</div>
+
+<!--*************************************Nav*******************************************-->
+<nav class="navbar navbar-expand-lg navbar-light" *ngIf="currentUser">
+  <div class="container-fluid">
+    <a class="navbar-brand" ><img src="assets/images/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" >
+    </div>
+    <div class="search-box">
+      <input type="text" class="input-search" placeholder=" Search...">
+      <button class="btn-search"><img src="assets/images/search1.png"></button>
+    </div>
+    <div id="cartcus">
+      <div id="txtcart1">
+        <a routerLink="cart"><img src="assets/images/shopping-cart.png"></a>
+      </div>
+      <div id="txtcart2">Cart</div>
+      <div id="ttItem"><a>{{totalItem}}</a></div>
+    </div>
+  </div>
+</nav>
+<!--****************************************List Products **************************************-->
+<div class="container mt-5 p-3 rounded cart" style=" position:relative; left:270px ;top:50px;">
+    <div class="row no-gutters">
+        <div class="col-md-8">
+            <div class="product-details mr-2">
+                <div class="d-flex flex-row align-items-center"><span class="ml-2" routerLink="/home/featured"><img src="assets/images/left-arrow.png">&emsp;Continue Shopping</span></div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                  <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded" >
+                    <div class="d-flex flex-row" style="width:250px;">
+                        <div class="ml-2" ><span class="font-weight-bold d-block">Sản Phẩm</span></div>
+                    </div>
+                    <div id="dg" style="width:100px;">Đơn Giá</div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block" style="width: 90px; text-align:end;">Số Lượng</span></div>
+                    <div class="d-block ml-5 " style="width:100px;text-align:start;">Thành Tiền</div>
+                    <div  style="width:110px; text-align:end">Thao Tác</div>
+                  </div>
+                </div>
+                <!--*******************Add to cart******************* -->
+                <div id="cartpick">
+                  <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded" *ngFor="let item of products let i=index" >
+                    <div class="d-flex flex-row"><img class="rounded" src="assets/images/{{item.image}}" width="40">
+                        <div class="ml-2" style="width:150px"><span class="font-weight-bold d-block" style="position:relative;top:10px;">{{item.title}}</span></div>
+                    </div>
+                    <div id="DG">${{item.price}}</div>
+                    <!--Số lượng-->
+                    <div class="d-flex flex-row align-items-center"><span class="d-block" style="width: 50px; text-align:end;">{{item.quantity}}
+                    </span></div>
+                    <div class="d-block ml-5" style="width:70px;text-align:start;">${{item.price*item.quantity}}</div>
+                    <div><button id="btn-trash" (click)="removeItem(item)" ><img src="assets/images/trashcart.png"  ></button></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="payment">
+                <div class="d-flex justify-content-between align-items-center"><img src="assets/images/cartimg.png" style="position:relative;left:30px;"></div>
+                <hr class="line">
+                <div class="d-flex justify-content-between information"><span class="txttotalR">Total</span><span class="txttotalL">${{grandTotal}}</span></div>
+                <div class="d-flex justify-content-between information"><span class="txttotalR">Shipping</span><span class="txttotalL">$20.00</span></div>
+                <button class="window" type="button"  data-toggle="modal" data-target="#exampleModal"><span class="txtbtnbuy">Buy</span><span class="txtbtnbuyR">${{TotalBuy}}</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- info Buy -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thông tin giao hàng</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <img src="assets/images/cancel.png">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Địa chỉ nhận hàng</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="địa chỉ">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Số điện thoại</label>
+            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="số điện thoại">
+          </div>
+          <div class="mb-3 form-check">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn001" (click)="pushtobill()">Xong</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+

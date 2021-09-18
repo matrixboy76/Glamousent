@@ -1,0 +1,24 @@
+<app-header></app-header>
+  <div id="pdcontent" *ngIf="product">
+    <div id="pd1">
+      <img style="width:500px;height:500px;"src="assets/images/{{product.image}}">
+    </div>
+    <div id="pd2">
+      <h2 id="title">{{product.title}}</h2>
+      <div id="pdtitle">
+        <p>Perfumes are complex and it is not easy to articulate what we smell with <br> our noses.We struggle with the vocabulary when describing a fragrance.<br>
+          We might use terms such a 'nice' or 'sweet' but these are not very specific and they are our personal opinion.
+      </div>
+      <div id="tag"><b style="font-size: 15px;">Tag:</b> <a style="color:cadetblue"> nuochoa,men</a></div>
+      <div id="pricetitle">PRICE</div>
+      <div id="pdprice">
+        <div id="price">${{product.price}}</div>
+      </div>
+      <div id="btndetail">
+        <button class="btn-AddProd" (click)=addtocart(product) >Add to cart</button>
+      </div>
+    </div>
+  </div>
+
+
+

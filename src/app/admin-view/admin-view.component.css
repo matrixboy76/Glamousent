@@ -1,0 +1,369 @@
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: 1200px;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #483D8B;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+.container-fluid{
+  height:50px;
+}
+.navbar-brand{
+  background-color: #483D8B;
+  height: 200px;
+}
+
+.sideB{
+  position: relative;
+  top:200px;
+}
+#lg{
+  position: relative;
+  top:3px;
+  left:900px;
+}
+body{
+  background-color: #EEE;
+}
+#crud{
+  width:1350px;
+}
+
+#view{
+  position: relative;
+  left:80px;
+  width:450px;
+  height: 400px;
+  float:left;
+  top:90px;
+  background-color: #fff;
+  box-shadow:0 0 10px 4px #BDBDBD,
+  0 0 10px 30px #EEE,
+  30px 0 20px 30px #EEE;
+}
+#edit{
+  float:left;
+  width: 450px;
+  position: relative;
+  background-color: #72B1A8 ;
+  color:white;
+  left: 42px;
+  top:90px;
+  height: 400px;
+  box-shadow:0 0 10px 4px #BDBDBD,
+  0 0 10px 30px #EEE,
+  30px 0 20px 30px #EEE;
+}
+#tab{
+  position: relative;
+
+  width:450px;
+  height: 400px;
+  float : left;
+  background-color: #72B1A8  ;
+  color:white;
+  position:relative;
+  top:90px;
+  left: 10px;
+  box-shadow:0 0 10px 4px #BDBDBD,
+  0 0 10px 30px #EEE,
+  30px 0 20px 30px #EEE;
+}
+
+.navbar-light-admin{
+  background-color:#D6DBDF ;
+}
+
+.titleAdmin{
+  text-align: center;
+  position: relative;
+  top:14px;
+}
+
+.contentAdmin{
+  background-color:white;
+  position: relative;
+  top:23px;
+  height:350px;
+}
+.mb-2{
+  position: relative;
+  top:30px;
+}
+#exampleInputEmail{
+  position:relative;
+  left:50px;
+  width: 350px;
+}
+.btnAdmin1{
+  text-align: center;
+  position: relative;
+  top:90px;
+}
+.btnAdmin2{
+  text-align: center;
+  position: relative;
+  top:45px;
+}
+.btn-submitAdmin{
+  border: none;
+  width:150px;
+  height:50px;
+  background-color: #72B1A8;
+  color : white;
+}
+.btndeleteAdmin{
+  border:none;
+  background-color:#EFFBFB;
+}
+#managerContent{
+  width:1350px;
+}
+.icoAdmin{
+  position: relative;
+  top:18px;
+  left:20px;
+  width:80px;
+}
+#manacontent{
+  background-color: white;
+  float:left;
+  width:200px;
+  left:10px;
+}
+#textContent{
+  width:180px;
+  position:relative;
+  left:100px;
+  bottom: 32px;
+}
+#manacontent1{
+  background-color: white;
+  float:left;
+  left:42px;
+}
+#manacontent2{
+  background-color: white;
+  float:left;
+  left:80px;
+}
+#manacontent , #manacontent1,#manacontent2 {
+  position:relative;
+  top:50;
+  width: 450px;
+  height: 100px;
+  box-shadow:0 0 10px 4px #BDBDBD,
+  0 0 10px 30px #EEE,
+  30px 0 20px 30px #EEE;
+}
+#productline{
+  height: 50px;
+  background-color: white;
+}
+#thead{
+  background-color:#72B1A8  ;
+  height: 50px;
+}
+
+#contentHead
+{
+  position:relative;
+  top: 14px;
+}
+
+
+#tbody{
+  height: 350px;
+  overflow-y: auto;/*tao thanh cuộn khi có quá nhiều phần tử (theo chiều dọc)*/
+}
+tbody{
+  position: relative;
+  color: black;
+}
+.value{
+  font-family:monospace;
+  color:lightslategrey
+}
+/*-----------------------------------------List User-----------------------*/
+#listUser{
+  position: relative;
+  width:690px;
+  height: 400px;
+  float : left;
+  background-color:  #ebf5f5;
+  position:relative;
+  top:150px;
+  left: 10px;
+  box-shadow:0 0 10px 4px #BDBDBD,
+  0 0 10px 30px #EEE,
+  30px 0 20px 30px #EEE;
+}
+#thead1{
+  background-color: burlywood;
+  height:50px;
+}
+#contentthead1{
+  position: relative;
+  top:14px;
+}
+#contentUserdata{
+  overflow-y:auto;
+}
+.bodyrow{
+  background-color:beige;
+  height:40px;
+  border-bottom:aliceblue solid 3px;
+}
+.contentbodyrow{
+  position: relative;
+  top:5px;
+  color:darkslategrey
+}
+.titleH{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:white;
+}
+.sideB{
+  color:#EEE
+}
+/*----------------------------------------------List Admin-------------------*/
+#listAdmin{
+  position: relative;
+  width:690px;
+  height: 400px;
+  float : left;
+  background-color: #ebf5f5;
+  position:relative;
+  top:150px;
+  left: 50px;
+  box-shadow:0 0 10px 4px #BDBDBD,
+  0 0 10px 30px #EEE,
+  30px 0 20px 30px #EEE;
+}
+/*---------------------------custom scroll-----------------*/
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:dimgray;
+  border-radius: 10px;
+}

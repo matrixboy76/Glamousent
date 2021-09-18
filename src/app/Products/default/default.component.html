@@ -1,0 +1,19 @@
+      <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <button class="btnImg" (click)="onSelect(item)"><img  src="assets/images/{{item.image}} " alt="error"></button>
+                <h5 id="titleProd">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.MoTa}}</p>
+                <p id="priceProd"><strong>${{item.price}}</strong></p>
+                <div id="star">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star "></span>
+                  <span class="fa fa-star "></span>
+                </div>
+                <!--'admin'+sliceUser() Bất kỳ username nào bắt đầu với từ admin -->
+                <button class="btn-AddProd"  (click)=addtocart(item) >Add to cart</button>
+            </div>
+        </ng-container>
+    </div>

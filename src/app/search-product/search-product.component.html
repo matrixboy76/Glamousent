@@ -1,0 +1,81 @@
+<app-header></app-header>
+<body>
+  <div class="route">
+    <p id="txt-result">Kết quả tìm kiếm cho :<span style="color:rgb(133, 11, 11)">'nuochoa'</span></p>
+  </div>
+  <div id="content">
+    <div class="menu">
+      <div id="list">
+        <ul>
+          <li><a href="">Armani</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Chanel</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Dior</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Hugo boss</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Lancôme</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Marc Jacobs</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Oscar de la Renta</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Paco Rabanne</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Tiffany & Co</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Tom ford</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Yves Saint Laurent</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Archipelago Botanicals</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Bomb Cosmetics</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Burberry</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Bvlgari</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Coty L'Aimant</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Giorgio Beverly Hills</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Margaret Dabbs London</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Mugler</a></li>
+          <div class = "kt"></div>
+          <li><a href="">Nina Ricci</a></li>
+          <div class = "kt"></div>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div id="content-search">
+        <div class="row">
+          <ng-container *ngFor="let item of productList">
+              <div class="card col-md-3">
+                  <button class="btnImg" (click)="onSelect(item)"><img  src="assets/images/{{item.image}} " alt="error"></button>
+                  <h5 id="titleProd">{{item.title}}</h5>
+                  <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.MoTa}}</p>
+                  <p id="priceProd"><strong>${{item.price}}</strong></p>
+                  <div id="star">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star "></span>
+                  </div>
+                  <!--'admin'+sliceUser() Bất kỳ username nào bắt đầu với từ admin -->
+                  <button class="btn-AddProd"  (click)=addtocart(item) >Add to cart</button>
+              </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <app-footer></app-footer>
+  </div>
+
+</body>
